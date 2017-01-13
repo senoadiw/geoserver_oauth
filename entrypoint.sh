@@ -7,6 +7,7 @@ source /root/.bashrc
 cp ${GEOSERVER_DATA_DIR}/security/auth/geonodeAuthProvider/config.xml ${GEOSERVER_DATA_DIR}/security/auth/geonodeAuthProvider/config.xml.orig
 # run the script
 /usr/local/tomcat/tmp/set_geoserver_auth.sh ${GEOSERVER_DATA_DIR}/security/auth/geonodeAuthProvider/config.xml ${GEOSERVER_DATA_DIR}/security/auth/geonodeAuthProvider/ > /usr/local/tomcat/tmp/set_geoserver_auth.log
+/usr/local/tomcat/tmp/setup_auth.sh
 
 # start tomcat
 exec catalina.sh run
